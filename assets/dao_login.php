@@ -1,6 +1,5 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."/projeto/";
-require($path."cfg/connection.php");
+require("connection.php");
 
 $email = $_POST["email"];
 $senha = $_POST["senha"];
@@ -10,11 +9,11 @@ $result = $conn->query($sql);
 
 if (mysqli_num_rows($result) > 0) {
     setcookie("login", $email, time()+3600, "/");
-    header("Location:/projeto/src/home/home.php");
+    header("Location:/projeto/menu.php");
 } else {    
     unset($_COOKIE["login"]);
     setcookie("login", "", -1, "/");
-    header("Location:login.php");
+    header("Location:/projeto/login.php");
 };
 
 

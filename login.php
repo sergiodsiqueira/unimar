@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style href="login.css" rel="stylesheet">
-        <?php include('login.css');   ?>
-    </style>
+  <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <title>Sistema de Cadastro de Clientes 1.0</title>
+  <title>ERP Focus</title>
 </head>
 
 <body>
@@ -24,7 +23,7 @@
           <div class="d-flex justify-content-center text-bg-primary">
             <div class="col-12 col-xl-9">
               <figure class="figure">
-                <img src="http://localhost/projeto/img/logo_pb.png" class="w-25 figure-img img-fluid" alt="Logotipo Focus">
+                <img src="http://localhost/projeto/assets/img/logo_pb.png" class="w-25 figure-img img-fluid" alt="Logotipo Focus">
               </figure>
               <hr class="border-primary-subtle mb-4">
               <h3 class="h2 mb-4">ERP Focus mais eficiência, gestão assertiva e melhores resultados</h3>
@@ -48,7 +47,7 @@
                   </div>
                 </div>
               </div>
-              <form action="/projeto/src/login/actlogin.php" method="POST">
+              <form action="/projeto/assets/dao_login.php" method="POST">
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">
