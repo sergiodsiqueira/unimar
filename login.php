@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="PT_BR">
+<html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <title>ERP Focus</title>
 
+  <!-- Libs -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <title>ERP Focus</title>
+  <!-- Styles -->
+  <link href="login.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -47,7 +49,7 @@
                   </div>
                 </div>
               </div>
-              <form action="/projeto/assets/dao_login.php" method="POST">
+              <form action="/projeto/api/login.php" method="POST">
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">

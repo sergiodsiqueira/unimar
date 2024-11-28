@@ -7,19 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <title>ERP Focus</title>
-
+    
+    <!-- Libs -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="menu.css">
+    
+    <!-- Styles -->
+    <link href="menu.css" rel="stylesheet" />
+    <link href="dashboard.css" rel="stylesheet" />
 </head>
 
 <body>
+
     <div class="d-flex">
         <!-- Sidebar -->
         <aside id="sidebar" class="sidebar-toggle">
             <div class="sidebar-logo">
-                <a href="#">FOCUS 1.0</a>
+                <img src="http://localhost/projeto/assets/img/logo_pb.png" class="logo-menu" alt="Logotipo Focus">
             </div>
             <!-- Sidebar Navigation -->
             <ul class="sidebar-nav p-0">
@@ -34,10 +39,10 @@
                     </a>
                     <ul id="comercial" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Clientes</a>
+                            <a href="/projeto/clientes.php" class="sidebar-link">Clientes</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Produtos</a>
+                            <a href="/projeto/produtos.php" class="sidebar-link">Produtos</a>
                         </li>
                     </ul>
                 </li>
@@ -49,24 +54,24 @@
                     </a>
                     <ul id="vendas" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Pedidos</a>
+                            <a href="/projeto/pedidos.php" class="sidebar-link">Pedidos</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Faturamento</a>
+                            <a href="/projeto/faturamento.php" class="sidebar-link">Faturamento</a>
                         </li>
                     </ul>
                 </li>
                 <li class="sidebar-header">
-                    Configurações
+                    Widgets
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
-                        <i class="fa-regular fa-message"></i>
-                        <span>Notificações</span>
+                    <a href="/projeto/home.php" class="sidebar-link">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="/projeto/configuracoes.php" class="sidebar-link">
                         <i class="fa-solid fa-sliders"></i>
                         <span>Configurações</span>
                     </a>
@@ -81,6 +86,7 @@
             </div>
         </aside>
         <!-- Sidebar Ends -->
+
         <!-- Main Component -->
         <div class="main">
             <nav class="navbar navbar-expand">
@@ -88,17 +94,3 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </nav>
-            <main class="p-3">
-                <div class="container-fluid">
-                    <?php include_once 'dashboard.php'; ?>
-                </div>
-            </main>
-        </div>
-    </div>
-    <script src="menu.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
