@@ -2,7 +2,23 @@
 
         <main class="p-3">
             <div class="container-fluid">
-                <p>Listagem de Clientes</p>
+            <!-- Content --> 
+
+                <div class="row justify-content-between">
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="d-grid">
+                            <a href="./cliente_add.php" class="btn btn-xl btn-primary">Adicionar Cliente</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
                 <center>
                     <table class="table">
                         <thead>
@@ -27,7 +43,7 @@
 
                                     echo '<td>';
                                     echo '<a href="#" class="btn btn-sm btn-warning">✏️</a> &ensp;';
-                                    echo '<a href="#" class="btn btn-sm btn-danger" onclick="return confirm("Tem certeza que deseja excluir este cliente?")">🗑️</a>';
+                                    echo '<a href="/projeto/api/cliente_delete.php?codigo='. $dado[0] .'" class="btn btn-sm btn-danger" onclick="return confirm("Tem certeza que deseja excluir este cliente?")">🗑️</a>';
                                     echo '</td>';
 
                                 echo '</tr>';
@@ -36,6 +52,8 @@
                         </tbody>
                     </table>
                 </center>
+            
+                <!-- End Content -->
             </div>
         </main>
     </div>
