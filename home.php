@@ -1,3 +1,5 @@
+<?php require './api/validar.php'; ?>
+
 <?php include 'menu.php'; ?>
 
         <main class="p-3">

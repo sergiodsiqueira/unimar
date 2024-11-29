@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <div class="d-flex">
         <!-- Sidebar -->
         <aside id="sidebar" class="sidebar-toggle">
@@ -79,7 +78,7 @@
             </ul>
             <!-- Sidebar Navigation Ends -->
             <div class="sidebar-footer">
-                <a href="/projeto/login.php" class="sidebar-link">
+                <a href="/projeto/api/logoff.php" class="sidebar-link">
                     <i class="fa-solid fa-power-off"></i>
                     <span>Sair</span>
                 </a>

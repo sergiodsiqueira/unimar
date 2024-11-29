@@ -1,7 +1,6 @@
-
+<?php require './api/validar.php'; ?>
 
 <?php include_once 'menu.php'; ?>
-
         <main class="p-3">
             <div class="container-fluid">
                 <!-- Content -->
@@ -16,13 +15,13 @@
                                     <div class="row">
                                         <div class="col-md-9">
                                             <div class="form-floating mb-3">
-                                                <input type="nome" class="form-control" name="nome" id="nome" placeholder="Nome Completo" required>
+                                                <input type="nome" class="form-control" name="nome" id="nome" required>
                                                 <label for="nome" class="form-label">Nome Completo</label>
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-floating mb-3">
-                                                <input type="cpf" class="form-control" name="cpf" id="cpf" placeholder="CPF" required>
+                                                <input type="cpf" class="form-control" name="cpf" id="cpf" required>
                                                 <label for="cpf" class="form-label">CPF</label>
                                             </div>
                                         </div>
@@ -30,13 +29,13 @@
                                     <div class="row">
                                         <div class="col-md-7">
                                             <div class="form-floating mb-3">
-                                                <input type="logradouro" class="form-control" name="logradouro" id="logradouro" placeholder="Logradouro">
+                                                <input type="logradouro" class="form-control" name="logradouro" id="logradouro">
                                                 <label for="logradouro" class="form-label">Logradouro</label>
                                             </div>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="form-floating mb-3">
-                                                <input type="bairro" class="form-control" name="bairro" id="bairro" placeholder="Bairro">
+                                                <input type="bairro" class="form-control" name="bairro" id="bairro">
                                                 <label for="bairro" class="form-label">Bairro</label>
                                             </div>
                                         </div>
@@ -44,19 +43,19 @@
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-floating mb-3">
-                                                <input type="cidade" class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+                                                <input type="cidade" class="form-control" name="cidade" id="cidade">
                                                 <label for="cidade" class="form-label">Cidade</label>
                                             </div>
                                         </div>
                                         <div class="col-md-1">
                                             <div class="form-floating mb-3">
-                                                <input type="uf" class="form-control" name="uf" id="uf" placeholder="UF">
+                                                <input type="uf" class="form-control" name="uf" id="uf">
                                                 <label for="uf" class="form-label">UF</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                                <input type="email" class="form-control" name="email" id="email" required>
                                                 <label for="email" class="form-label">Email</label>
                                             </div>
                                         </div>                                        
@@ -64,13 +63,13 @@
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="telefone" class="form-control" name="telefone" id="telefone" placeholder="Telefone">
+                                                <input type="telefone" class="form-control" name="telefone" id="telefone">
                                                 <label for="telefone" class="form-label">Telefone</label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-floating mb-3">
-                                                <input type="celular" class="form-control" name="celular" id="celular" placeholder="Celular">
+                                                <input type="celular" class="form-control" name="celular" id="celular">
                                                 <label for="celular" class="form-label">Celular</label>
                                             </div>
                                         </div> 
@@ -78,7 +77,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="d-grid">
-                                                <button class="btn btn-primary btn-lg" type="submit" value="cadastrar" id="cadastrar">CADASTRAR</button>
+                                                <button class="btn btn-primary btn-lg" type="submit" value="cadastrar" id="cadastrar">Cadastrar</button>
                                             </div>
                                         </div>
                                     </div>

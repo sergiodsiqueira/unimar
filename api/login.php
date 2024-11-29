@@ -1,22 +1,49 @@
 <?php
 require("connection.php");
 
-$email = $_POST["email"];
-$senha = $_POST["senha"];
+$msg = '';
 
-$sql = "SELECT * FROM USUARIOS WHERE EMAIL = '$email' AND SENHA = '$senha'";
-$result = $conn->query($sql);
+if (isset($_POST['email']) && isset($_POST['senha'])) {
 
-if (mysqli_num_rows($result) > 0) {
-    setcookie("login", $email, time() + 3600, "/");
-    header("Location:/projeto/home.php");
-} else {
-    echo "<script language='javascript' type='text/javascript'>
-            alert('Login e/ou senha incorretos');
+  extract($_POST);
+  $erro = true;
+
+  if (($email != '') && ($senha != '')) {
+
+    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $res = $conn->query($sql);
+
+    if (mysqli_num_rows($res) > 0) {
+
+      if ($email != '') {
+        session_start();
+        $_SESSION['semail'] = $email;
+        $erro = false;
+
+        if (isset($lembrar)) {
+          if ($lembrar == 'on') {
+            setcookie('clembrar', 'checked="checked"', time() + 60 * 60 * 24 * 1);
+            setcookie('cemail', $email, time() + 60 * 60 * 24 * 1);
+            setcookie('csenha', $senha, time() + 60 * 60 * 24 * 1);
+          }
+        } else {
+          setcookie('clembrar', '', time() - 60 * 60 * 24 * 1);
+          setcookie('cemail', '', time() - 60 * 60 * 24 * 1);
+          setcookie('csenha', '', time() - 60 * 60 * 24 * 1);
+        }
+      }
+    }
+  }
+
+  if ($erro) {
+    echo "<script>
             window.location.href='/projeto/login.php';
+            alert('Login e/ou senha incorretos');            
           </script>";
-    die();
-    unset($_COOKIE["login"]);
-    setcookie("login", "", -1, "/");
-    header("Location:/projeto/login.php");
-};
+  } else {
+    echo "<script>
+            window.location.href='/projeto/home.php';
+        </script>";
+  }
+}
+?>
